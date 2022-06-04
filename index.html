@@ -1,0 +1,1316 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script type="15ebee6124b715bb0f6758fd-text/javascript">if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script type="15ebee6124b715bb0f6758fd-text/javascript">class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="preload" as="font" href="/wp-content/plugins/lightweight-social-icons/fonts/fontello.woff" data-wpacu-preload-font="1" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- This site is optimized with the Yoast SEO Premium plugin v16.6 (Yoast SEO v19.0) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>eHarmony vs. Match (2022): Prices, Members, and Features</title><link rel="stylesheet" href="https://healthyframework.com/wp-content/cache/min/1/3a4e06fc308ebbe8f454b1e3860c2403.css" media="all" data-minify="1" />
+	<meta name="description" content="A detailed look at eHarmony vs. Match, looking at quality, price, free trials, the number of singles, and other details singles need to know." />
+	<link rel="canonical" href="https://healthyframework.com/dating/versus/eharmony-vs-match/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="eHarmony vs. Match" />
+	<meta property="og:description" content="A detailed look at eHarmony vs. Match, looking at quality, price, free trials, the number of singles, and other details singles need to know." />
+	<meta property="og:url" content="https://healthyframework.com/dating/versus/eharmony-vs-match/" />
+	<meta property="og:site_name" content="Healthy Framework" />
+	<meta property="article:modified_time" content="2022-05-30T22:04:29+00:00" />
+	<meta property="og:image" content="https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131.jpg" />
+	<meta property="og:image:width" content="1294" />
+	<meta property="og:image:height" content="824" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="15 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://healthyframework.com/#organization","name":"Healthy Framework","url":"https://healthyframework.com/","sameAs":[],"logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://healthyframework.com/#/schema/logo/image/","url":"https://healthyframework.com/wp-content/uploads/2018/12/Logo.png","contentUrl":"https://healthyframework.com/wp-content/uploads/2018/12/Logo.png","width":300,"height":300,"caption":"Healthy Framework"},"image":{"@id":"https://healthyframework.com/#/schema/logo/image/"}},{"@type":"WebSite","@id":"https://healthyframework.com/#website","url":"https://healthyframework.com/","name":"Healthy Framework","description":"Dating and Relationship Building Resources","publisher":{"@id":"https://healthyframework.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://healthyframework.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://healthyframework.com/dating/versus/eharmony-vs-match/#primaryimage","url":"https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131.jpg","contentUrl":"https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131.jpg","width":1294,"height":824,"caption":"Homepage - eHarmony"},{"@type":"WebPage","@id":"https://healthyframework.com/dating/versus/eharmony-vs-match/#webpage","url":"https://healthyframework.com/dating/versus/eharmony-vs-match/","name":"eHarmony vs. Match (2022): Prices, Members, and Features","isPartOf":{"@id":"https://healthyframework.com/#website"},"primaryImageOfPage":{"@id":"https://healthyframework.com/dating/versus/eharmony-vs-match/#primaryimage"},"datePublished":"2018-08-16T19:47:44+00:00","dateModified":"2022-05-30T22:04:29+00:00","description":"A detailed look at eHarmony vs. Match, looking at quality, price, free trials, the number of singles, and other details singles need to know.","breadcrumb":{"@id":"https://healthyframework.com/dating/versus/eharmony-vs-match/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://healthyframework.com/dating/versus/eharmony-vs-match/"]}]},{"@type":"BreadcrumbList","@id":"https://healthyframework.com/dating/versus/eharmony-vs-match/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://healthyframework.com/"},{"@type":"ListItem","position":2,"name":"Dating","item":"https://healthyframework.com/dating/"},{"@type":"ListItem","position":3,"name":"Compare","item":"https://healthyframework.com/dating/versus/"},{"@type":"ListItem","position":4,"name":"eHarmony vs. Match"}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+
+<link rel="alternate" type="application/rss+xml" title="Healthy Framework &raquo; Feed" href="https://healthyframework.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Healthy Framework &raquo; Comments Feed" href="https://healthyframework.com/comments/feed/" />
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--contrast: var(--contrast);--wp--preset--color--contrast-2: var(--contrast-2);--wp--preset--color--contrast-3: var(--contrast-3);--wp--preset--color--base: var(--base);--wp--preset--color--base-2: var(--base-2);--wp--preset--color--base-3: var(--base-3);--wp--preset--color--accent: var(--accent);--wp--preset--color--global-color-8: var(--global-color-8);--wp--preset--color--global-color-9: var(--global-color-9);--wp--preset--color--global-color-10: var(--global-color-10);--wp--preset--color--global-color-11: var(--global-color-11);--wp--preset--color--global-color-12: var(--global-color-12);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+
+
+
+
+<style id='generate-style-inline-css'>
+body{background-color:#ffffff;color:#3a3a3a;}a{color:#1e73be;}a:hover, a:focus, a:active{color:#000000;}body .grid-container{max-width:1100px;}.wp-block-group__inner-container{max-width:1100px;margin-left:auto;margin-right:auto;}.navigation-search{position:absolute;left:-99999px;pointer-events:none;visibility:hidden;z-index:20;width:100%;top:0;transition:opacity 100ms ease-in-out;opacity:0;}.navigation-search.nav-search-active{left:0;right:0;pointer-events:auto;visibility:visible;opacity:1;}.navigation-search input[type="search"]{outline:0;border:0;vertical-align:bottom;line-height:1;opacity:0.9;width:100%;z-index:20;border-radius:0;-webkit-appearance:none;height:60px;}.navigation-search input::-ms-clear{display:none;width:0;height:0;}.navigation-search input::-ms-reveal{display:none;width:0;height:0;}.navigation-search input::-webkit-search-decoration, .navigation-search input::-webkit-search-cancel-button, .navigation-search input::-webkit-search-results-button, .navigation-search input::-webkit-search-results-decoration{display:none;}.main-navigation li.search-item{z-index:21;}li.search-item.active{transition:opacity 100ms ease-in-out;}.nav-left-sidebar .main-navigation li.search-item.active,.nav-right-sidebar .main-navigation li.search-item.active{width:auto;display:inline-block;float:right;}.gen-sidebar-nav .navigation-search{top:auto;bottom:0;}:root{--contrast:#222222;--contrast-2:#575760;--contrast-3:#b2b2be;--base:#f0f0f0;--base-2:#f7f8f9;--base-3:#ffffff;--accent:#1e73be;--global-color-8:#e5f5ff;--global-color-9:#FAEDE9;--global-color-10:#E9FAEE;--global-color-11:#154f82;--global-color-12:rgba(21,79,130,0.8);}.has-contrast-color{color:#222222;}.has-contrast-background-color{background-color:#222222;}.has-contrast-2-color{color:#575760;}.has-contrast-2-background-color{background-color:#575760;}.has-contrast-3-color{color:#b2b2be;}.has-contrast-3-background-color{background-color:#b2b2be;}.has-base-color{color:#f0f0f0;}.has-base-background-color{background-color:#f0f0f0;}.has-base-2-color{color:#f7f8f9;}.has-base-2-background-color{background-color:#f7f8f9;}.has-base-3-color{color:#ffffff;}.has-base-3-background-color{background-color:#ffffff;}.has-accent-color{color:#1e73be;}.has-accent-background-color{background-color:#1e73be;}.has-global-color-8-color{color:#e5f5ff;}.has-global-color-8-background-color{background-color:#e5f5ff;}.has-global-color-9-color{color:#FAEDE9;}.has-global-color-9-background-color{background-color:#FAEDE9;}.has-global-color-10-color{color:#E9FAEE;}.has-global-color-10-background-color{background-color:#E9FAEE;}.has-global-color-11-color{color:#154f82;}.has-global-color-11-background-color{background-color:#154f82;}.has-global-color-12-color{color:rgba(21,79,130,0.8);}.has-global-color-12-background-color{background-color:rgba(21,79,130,0.8);}body, button, input, select, textarea{font-family:Helvetica;}body{line-height:1.5;}.entry-content > [class*="wp-block-"]:not(:last-child){margin-bottom:1.5em;}.main-navigation a, .menu-toggle{font-family:Helvetica;font-size:17px;}.main-navigation .main-nav ul ul li a{font-size:14px;}.sidebar .widget, .footer-widgets .widget{font-size:16px;}h1{font-weight:300;font-size:40px;}h2{font-weight:300;font-size:30px;}h3{font-size:20px;}h4{font-size:inherit;}h5{font-size:inherit;}@media (max-width:768px){.main-title{font-size:20px;}h1{font-size:30px;}h2{font-size:25px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#ffffff;color:#3a3a3a;}.site-header a{color:#3a3a3a;}.main-title a,.main-title a:hover{color:#ffffff;}.site-description{color:#757575;}.mobile-menu-control-wrapper .menu-toggle,.mobile-menu-control-wrapper .menu-toggle:hover,.mobile-menu-control-wrapper .menu-toggle:focus,.has-inline-mobile-toggle #site-navigation.toggled{background-color:rgba(0, 0, 0, 0.02);}.main-navigation,.main-navigation ul ul{background-color:#ffffff;}.main-navigation .main-nav ul li a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{color:#515151;}.main-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a, .main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{color:#7a8896;background-color:#ffffff;}button.menu-toggle:hover,button.menu-toggle:focus,.main-navigation .mobile-bar-items a,.main-navigation .mobile-bar-items a:hover,.main-navigation .mobile-bar-items a:focus{color:#515151;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#7a8896;background-color:#ffffff;}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a, .main-navigation .menu-bar-items .search-item.active > a{color:#7a8896;background-color:#ffffff;}.main-navigation ul ul{background-color:#ffffff;}.main-navigation .main-nav ul ul li a{color:#515151;}.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover > a,.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"]) > a{color:#7a8896;background-color:#eaeaea;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#eaeaea;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#ffffff;}.entry-meta{color:#595959;}.entry-meta a{color:#595959;}.entry-meta a:hover{color:#1e73be;}.sidebar .widget{background-color:rgba(255,255,255,0.53);}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{color:#ffffff;background-color:#222222;}.footer-widgets .widget-title{color:#ffffff;}.site-info{color:#ffffff;background-color:#222222;}.site-info a{color:#ffffff;}.site-info a:hover{color:#606060;}.footer-bar .widget_nav_menu .current-menu-item a{color:#606060;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.wp-block-button__link:not(.has-background){color:#272d22;background-color:#d5f3b9;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#272d22;background-color:rgba(124,218,36,0.79);}a.generate-back-to-top{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}a.generate-back-to-top:hover,a.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}@media (max-width: 768px){.main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{background:none;color:#515151;}}.inside-top-bar{padding:10px;}.inside-header{padding:40px;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:55px 40px 55px 40px;}.site-main .wp-block-group__inner-container{padding:55px 40px 55px 40px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-40px;width:calc(100% + 80px);max-width:calc(100% + 80px);}.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a{line-height:75px;}.main-navigation ul ul{width:260px;}.navigation-search input[type="search"]{height:75px;}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}.widget-area .widget{padding:40px 10px 40px 10px;}.site-info{padding:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:30px;}.site-main .wp-block-group__inner-container{padding:30px;}.site-info{padding-right:10px;padding-left:10px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}}@media (max-width: 768px){.main-navigation .menu-toggle,.main-navigation .mobile-bar-items,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav{display:none;}[class*="nav-float-"] .site-header .inside-header > *{float:none;clear:both;}}
+.dynamic-author-image-rounded{border-radius:100%;}.dynamic-featured-image, .dynamic-author-image{vertical-align:middle;}.one-container.blog .dynamic-content-template:not(:last-child), .one-container.archive .dynamic-content-template:not(:last-child){padding-bottom:0px;}.dynamic-entry-excerpt > p:last-child{margin-bottom:0px;}
+.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a{transition: line-height 300ms ease}
+.navigation-branding .main-title{font-weight:bold;text-transform:none;font-size:25px;}@media (max-width: 768px){.navigation-branding .main-title{font-size:20px;}}
+</style>
+
+
+
+
+
+
+
+<style id='generate-navigation-branding-inline-css'>
+.navigation-branding img, .site-logo.mobile-header-logo img{height:75px;width:auto;}.navigation-branding .main-title{line-height:75px;}@media (max-width: 1110px){#site-navigation .navigation-branding, #sticky-navigation .navigation-branding{margin-left:10px;}}@media (max-width: 768px){.main-navigation:not(.slideout-navigation) .main-nav{-ms-flex:0 0 100%;flex:0 0 100%;}.main-navigation:not(.slideout-navigation) .inside-navigation{-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-ms-flexbox;display:flex;}.nav-aligned-center .navigation-branding, .nav-aligned-left .navigation-branding{margin-right:auto;}.nav-aligned-center  .main-navigation.has-branding:not(.slideout-navigation) .inside-navigation .main-nav,.nav-aligned-center  .main-navigation.has-sticky-branding.navigation-stick .inside-navigation .main-nav,.nav-aligned-left  .main-navigation.has-branding:not(.slideout-navigation) .inside-navigation .main-nav,.nav-aligned-left  .main-navigation.has-sticky-branding.navigation-stick .inside-navigation .main-nav{margin-right:0px;}}
+</style>
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://healthyframework.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+</style>
+<script type="rocketlazyloadscript" src='https://healthyframework.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type="rocketlazyloadscript" src='https://healthyframework.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+<link rel="https://api.w.org/" href="https://healthyframework.com/wp-json/" /><link rel="alternate" type="application/json" href="https://healthyframework.com/wp-json/wp/v2/pages/9564" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://healthyframework.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://healthyframework.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 6.0" />
+<link rel='shortlink' href='https://healthyframework.com/?p=9564' />
+<link rel="alternate" type="application/json+oembed" href="https://healthyframework.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhealthyframework.com%2Fdating%2Fversus%2Feharmony-vs-match%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://healthyframework.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhealthyframework.com%2Fdating%2Fversus%2Feharmony-vs-match%2F&#038;format=xml" />
+<style type="text/css">.eafl-disclaimer-small { font-size: 0.8em; }
+.eafl-disclaimer-smaller { font-size: 0.6em; }</style><!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="rocketlazyloadscript" async src="https://www.googletagmanager.com/gtag/js?id=UA-180316214-1"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180316214-1');
+</script>
+
+<meta name="google-site-verification" content="FMHMBqHj7EQ8aLqJEZLvgngJz9oj7FAOZbYv7Q1cJq8" />
+
+<meta name="fo-verify" content="c73ce823-70db-45e3-a107-127f690d9b71">
+
+<!-- Google Tag Manager -->
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M2W2GK6');</script>
+<!-- End Google Tag Manager -->
+
+<meta name="p:domain_verify" content="518795d23e7a97ced4dae1f7ceaa66cc"/>
+<meta name='ir-site-verification-token' value='590558677' /><link rel="icon" href="https://healthyframework.com/wp-content/uploads/2018/12/cropped-Logo-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://healthyframework.com/wp-content/uploads/2018/12/cropped-Logo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://healthyframework.com/wp-content/uploads/2018/12/cropped-Logo-180x180.png" />
+<meta name="msapplication-TileImage" content="https://healthyframework.com/wp-content/uploads/2018/12/cropped-Logo-270x270.png" />
+		<style id="wp-custom-css">
+			.wp-block-separator {
+	border-top: 0px	solid;
+	border-bottom: 0px solid;
+	}
+
+h1.has-background, h2.has-background, h3.has-background, h4.has-background, h5.has-background, h6.has-background {
+    padding-left: 25px;
+		padding-right: 25px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* MEGA MENU */
+@media (min-width: 769px) {
+    nav .main-nav .mega-menu {
+        position: static;
+    }
+
+    nav .main-nav .mega-menu > ul {
+        position: absolute;
+        width: 100%;
+        left: 0 !important;
+    }
+
+    nav .main-nav .mega-menu > ul > li > a {
+        font-weight: bold;
+    }
+
+    nav .main-nav .mega-menu>ul>li {
+        display: inline-block;
+        width: 25%;
+        vertical-align: top;
+    }
+
+    nav .main-nav .mega-menu.mega-menu-col-2>ul>li {
+        width: 50%;
+    }
+
+    nav .main-nav .mega-menu.mega-menu-col-3>ul>li {
+        width: 33.3333%;
+    }
+
+    nav .main-nav .mega-menu.mega-menu-col-5>ul>li {
+        width: 20%;
+    }
+
+    nav .main-nav .mega-menu > ul > li:hover > a,
+    nav .main-nav .mega-menu > ul > li:focus > a,
+    nav .main-nav .mega-menu > ul > li[class*="current-"] > a,
+    nav .main-nav .mega-menu ul ul {
+        background-color: transparent !important;
+        color: inherit;
+    }
+
+    nav .main-nav .mega-menu ul .sub-menu {
+        position: static;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        box-shadow: 0 0 0;
+        left: 0;
+        height: auto;
+    }
+
+    nav .main-nav .mega-menu ul.toggled-on .sub-menu {
+        pointer-events: auto;
+    }
+
+    nav .main-nav .mega-menu .sub-menu .menu-item-has-children .dropdown-menu-toggle {
+        display: none;
+    }
+}
+
+
+.home #breadcrumbs {
+    display: none;
+}
+
+.main-navigation {
+    border-bottom: 1px solid rgb(192,192,192,.3);
+}
+
+/*FOR THE FULL BUTTONS*/
+
+a.button.full, a.button.full:visited  {
+    background-color: rgba(124,218,36,0.32);
+    border: 2px solid transparent;
+    border-radius: 5px;
+		width: 300px;
+	  max-width: 100%;
+		text-align: center;
+    color: #000000;
+}
+
+/*FOR THE GRAY BUTTONS*/
+a.button.gray, a.button.gray:visited {
+    background-color: #ecf0f5;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    color: #000000;
+}
+
+a.button.gray:hover {
+  background-color: #a1a3a8;
+  color: white;
+}
+
+/* Drop Shadow*/
+
+.drop-shadow-two img {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+/* Adjust homepage blue header up*/
+
+.seenontop {
+	margin-top: -109px;
+	height: 200px; 
+	box-shadow: 0 1px 1px rgba(103,128,159,0.3);
+}
+
+@media (max-width: 768px) { 
+	.seenontop {
+	margin-top: -85px;
+	height: auto; 
+	}
+}
+
+/*FOR THE 3 COLUMNS BUTTONS*/
+a.button.graygray, a.button.graygray:visited {
+    background-color: #ecf0f5;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 265px;
+    text-align: center;
+    color: #000000;
+}
+
+@media (max-width: 768px) { 
+a.button.graygray, a.button.graygray:visited {
+	margin-left: 21px; 
+}
+}
+
+a.button.graygray:hover {
+  background-color: #a1a3a8;
+  color: white;
+}
+
+/* Gray home page buttons */
+a.button.graygrayhome, a.button.graygrayhome:visited {
+    background-color: #ecf0f5;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 265px;
+    text-align: center;
+    color: #000000;
+		margin-left: 25%
+}
+
+@media (max-width: 768px) { 
+a.button.graygrayhome, a.button.graygrayhome:visited {
+	margin-left: 21px; 
+}
+}
+
+a.button.graygrayhome:hover {
+  background-color: #a1a3a8;
+  color: white;
+}
+
+/*DIVIDE IN SIDE WIDGET */
+.sidebar li {
+    border-bottom: 1px solid #ececec;
+		padding: 10px
+}
+
+/*SPACE ON LISTS AND NUMBERED LISTS */
+.entry-content ul li, .entry-content ol li {
+    margin-bottom: 7px;
+}
+
+
+
+
+/* Logo size */
+@media screen and (min-width: 800px) {
+.site-logo img { 
+	width:350px;
+	height: 100%;
+}
+}
+
+.top-home-page {
+	margin-top: -50px
+}
+
+@media (max-width: 768px) { 
+	.top-home-page {
+	margin-top: -20px;
+}	
+	
+
+	
+
+
+		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body class="page-template-default page page-id-9564 page-child parent-pageid-9289 wp-custom-logo wp-embed-responsive post-image-aligned-center sticky-menu-fade sticky-enabled desktop-sticky-menu no-sidebar nav-below-header separate-containers fluid-header active-footer-widgets-4 nav-search-enabled nav-aligned-right header-aligned-left dropdown-hover" itemtype="https://schema.org/WebPage" itemscope>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2W2GK6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<nav class="auto-hide-sticky has-branding main-navigation sub-menu-right" id="site-navigation" aria-label="Primary"  itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation grid-container grid-parent">
+				<div class="navigation-branding"><div class="site-logo">
+						<a href="https://healthyframework.com/" title="Healthy Framework" rel="home">
+							<img  class="header-image is-logo-image" alt="Healthy Framework" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20350%2070'%3E%3C/svg%3E" title="Healthy Framework" data-lazy-srcset="https://healthyframework.com/wp-content/uploads/2020/10/Newest-Healthy-Framework-logo.png 1x, https://healthyframework.com/wp-content/uploads/2020/10/Newest-Healthy-Framework-logo.png 2x" width="350" height="70" data-lazy-src="https://healthyframework.com/wp-content/uploads/2020/10/Newest-Healthy-Framework-logo.png" /><noscript><img  class="header-image is-logo-image" alt="Healthy Framework" src="https://healthyframework.com/wp-content/uploads/2020/10/Newest-Healthy-Framework-logo.png" title="Healthy Framework" srcset="https://healthyframework.com/wp-content/uploads/2020/10/Newest-Healthy-Framework-logo.png 1x, https://healthyframework.com/wp-content/uploads/2020/10/Newest-Healthy-Framework-logo.png 2x" width="350" height="70" /></noscript>
+						</a>
+					</div></div><form method="get" class="search-form navigation-search" action="https://healthyframework.com/">
+					<input type="search" class="search-field" value="" name="s" title="Search" />
+				</form>		<div class="mobile-bar-items">
+						<span class="search-item">
+				<a aria-label="Open Search Bar" href="#">
+					<span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span>				</a>
+			</span>
+		</div>
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="mobile-menu">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-mega-menu-header" class=" menu sf-menu"><li id="menu-item-17764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-17764"><a href="https://healthyframework.com/">Research<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-27789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27789"><a href="https://healthyframework.com/dating/online-dating-app-usage-data-study/">Online Dating Usage Study</a></li>
+	<li id="menu-item-22000" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22000"><a href="https://healthyframework.com/dating/marriage-and-divorce-trends/">Marriage and Divorce Rate Trends</a></li>
+	<li id="menu-item-17776" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17776"><a href="https://healthyframework.com/dating/best-and-worst-cities-for-singles-in-america/">Best Cities for Singles</a></li>
+	<li id="menu-item-17791" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17791"><a href="https://healthyframework.com/dating/advice/online-dating-statistics/">Online Dating by the Numbers</a></li>
+	<li id="menu-item-17777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17777"><a href="https://healthyframework.com/dating/apps/">Best Dating Apps</a></li>
+</ul>
+</li>
+<li id="menu-item-17819" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17819"><a href="https://healthyframework.com/dating/guides/">Articles<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-22033" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22033"><a href="https://healthyframework.com/anniversary/">Anniversary Gifts</a></li>
+	<li id="menu-item-17782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17782"><a href="https://healthyframework.com/dating/beginners/">Beginner Dating Advice</a></li>
+	<li id="menu-item-17785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17785"><a href="https://healthyframework.com/dating/advice/">General Dating Advice</a></li>
+	<li id="menu-item-17783" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17783"><a href="https://healthyframework.com/dating/first-dates/">First Date Advice</a></li>
+	<li id="menu-item-17784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17784"><a href="https://healthyframework.com/dating/religious/">Religious Dating Advice</a></li>
+	<li id="menu-item-17786" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17786"><a href="https://healthyframework.com/dating/single-parents/">Single Parent Dating</a></li>
+	<li id="menu-item-17787" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17787"><a href="https://healthyframework.com/dating/dating-site-info/">Site Bios and Features</a></li>
+</ul>
+</li>
+<li id="menu-item-20662" class="mega-menu mega-menu-col-4 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-20662"><a href="https://healthyframework.com/dating/">Resources<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-20680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-20680"><a href="https://healthyframework.com/dating/review/">Reviews<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-20679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20679"><a href="https://healthyframework.com/dating/review/">All Reviews</a></li>
+		<li id="menu-item-20686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20686"><a href="https://healthyframework.com/dating/review/catholic-match/">Catholic Match</a></li>
+		<li id="menu-item-20682" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20682"><a href="https://healthyframework.com/dating/review/christian-mingle/">Christian Mingle</a></li>
+		<li id="menu-item-20678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20678"><a href="https://healthyframework.com/dating/review/eharmony/">eHarmony</a></li>
+		<li id="menu-item-20688" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20688"><a href="https://healthyframework.com/dating/review/elite-singles/">Elite Singles</a></li>
+		<li id="menu-item-20689" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20689"><a href="https://healthyframework.com/dating/review/jdate/">JDate</a></li>
+		<li id="menu-item-20694" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20694"><a href="https://healthyframework.com/dating/review/passion/">Passion</a></li>
+		<li id="menu-item-20697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20697"><a href="https://healthyframework.com/dating/review/seeking-arrangement/">Seeking</a></li>
+		<li id="menu-item-20698" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20698"><a href="https://healthyframework.com/dating/review/silver-singles/">SilverSingles</a></li>
+		<li id="menu-item-22538" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22538"><a href="https://healthyframework.com/dating/review/the-league/">The League</a></li>
+		<li id="menu-item-20703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20703"><a href="https://healthyframework.com/dating/review/zoosk/">Zoosk</a></li>
+	</ul>
+</li>
+	<li id="menu-item-20704" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-20704"><a href="https://healthyframework.com/dating/free-trial/">Free Trials<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-20706" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20706"><a href="https://healthyframework.com/dating/free-trial/">All Free Trials</a></li>
+		<li id="menu-item-20707" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20707"><a href="https://healthyframework.com/dating/free-trial/catholic-match/">Catholic Match</a></li>
+		<li id="menu-item-20708" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20708"><a href="https://healthyframework.com/dating/free-trial/christian-mingle/">Christian Mingle</a></li>
+		<li id="menu-item-20705" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20705"><a href="https://healthyframework.com/dating/free-trial/eharmony/">eHarmony</a></li>
+		<li id="menu-item-20709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20709"><a href="https://healthyframework.com/dating/free-trial/elite-singles/">Elite Singles</a></li>
+		<li id="menu-item-20710" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20710"><a href="https://healthyframework.com/dating/free-trial/jdate/">JDate</a></li>
+		<li id="menu-item-20711" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20711"><a href="https://healthyframework.com/dating/free-trial/passion/">Passion</a></li>
+		<li id="menu-item-20712" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20712"><a href="https://healthyframework.com/dating/free-trial/seeking-arrangement/">Seeking</a></li>
+		<li id="menu-item-20713" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20713"><a href="https://healthyframework.com/dating/free-trial/silver-singles/">SilverSingles</a></li>
+		<li id="menu-item-22540" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22540"><a href="https://healthyframework.com/dating/free-trial/the-league/">The League</a></li>
+		<li id="menu-item-20714" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20714"><a href="https://healthyframework.com/dating/free-trial/zoosk/">Zoosk</a></li>
+	</ul>
+</li>
+	<li id="menu-item-17779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17779"><a href="https://healthyframework.com/dating/cost/">Costs<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-20715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20715"><a href="https://healthyframework.com/dating/cost/">All Costs</a></li>
+		<li id="menu-item-20716" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20716"><a href="https://healthyframework.com/dating/cost/catholic-match/">Catholic Match</a></li>
+		<li id="menu-item-20717" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20717"><a href="https://healthyframework.com/dating/cost/christian-mingle/">Christian Mingle</a></li>
+		<li id="menu-item-20718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20718"><a href="https://healthyframework.com/dating/cost/eharmony/">eHarmony</a></li>
+		<li id="menu-item-20719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20719"><a href="https://healthyframework.com/dating/cost/elite-singles/">Elite Singles</a></li>
+		<li id="menu-item-20720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20720"><a href="https://healthyframework.com/dating/cost/jdate/">JDate</a></li>
+		<li id="menu-item-20721" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20721"><a href="https://healthyframework.com/dating/cost/passion/">Passion</a></li>
+		<li id="menu-item-20722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20722"><a href="https://healthyframework.com/dating/cost/seeking-arrangement/">Seeking</a></li>
+		<li id="menu-item-20723" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20723"><a href="https://healthyframework.com/dating/cost/silver-singles/">SilverSingles</a></li>
+		<li id="menu-item-22539" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22539"><a href="https://healthyframework.com/dating/cost/the-league/">The League</a></li>
+		<li id="menu-item-20724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20724"><a href="https://healthyframework.com/dating/cost/zoosk/">Zoosk</a></li>
+	</ul>
+</li>
+	<li id="menu-item-17768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17768"><a href="https://healthyframework.com/dating/apps/">Other<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-21875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21875"><a href="https://healthyframework.com/relationship-butler/">Relationship Butler</a></li>
+		<li id="menu-item-18069" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18069"><a href="https://healthyframework.com/dating/versus/">Dating Site Comparisons</a></li>
+		<li id="menu-item-24074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24074"><a href="https://healthyframework.com/dating/where-to-meet-singles-near-you/">Where to Meet Singles &#8211; By City</a></li>
+		<li id="menu-item-27418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27418"><a href="https://healthyframework.com/dating/review-criteria/">How We Rank &#8211; Review Criteria</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-17765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-17765"><a href="https://healthyframework.com/about/">About<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-20482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20482"><a href="https://healthyframework.com/newsletter/">Get Our Free Newsletter</a></li>
+	<li id="menu-item-17771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17771"><a href="https://healthyframework.com/about/">About Our Team</a></li>
+	<li id="menu-item-17775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17775"><a href="https://healthyframework.com/dating/blog/">Blog</a></li>
+	<li id="menu-item-17772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17772"><a href="https://healthyframework.com/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-17773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17773"><a href="https://healthyframework.com/terms-of-service/">TOS and Cookies</a></li>
+	<li id="menu-item-17774" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17774"><a href="https://healthyframework.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-20483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20483"><a href="https://healthyframework.com/newsletter/">Get Updates</a></li>
+<li class="search-item menu-item-align-right"><a aria-label="Open Search Bar" href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span></a></li></ul></div>			</div>
+		</nav>
+		
+	<div class="site grid-container container hfeed grid-parent" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area grid-parent mobile-grid-100 grid-100 tablet-grid-100" id="primary">
+		<main class="site-main" id="main">
+			
+<article id="post-9564" class="post-9564 page type-page status-publish has-post-thumbnail" itemtype="https://schema.org/CreativeWork" itemscope>
+	<div class="inside-article">
+		<p id="breadcrumbs"><span><span><a href="https://healthyframework.com/">Home</a> » <span><a href="https://healthyframework.com/dating/">Dating</a> » <span><a href="https://healthyframework.com/dating/versus/">Compare</a> » <span class="breadcrumb_last" aria-current="page">eHarmony vs. Match</span></span></span></span></span></p>
+			<header class="entry-header" aria-label="Content">
+				<h1 class="entry-title" itemprop="headline">eHarmony vs. Match</h1>			</header>
+
+			
+		<div class="entry-content" itemprop="text">
+			
+<p><em>By: <a href="https://healthyframework.com/jason-lee/" target="_blank" rel="noreferrer noopener">Jason Lee</a> </em></p>
+
+
+
+<p>Get your popcorn and grab a seat! Today we&#8217;re going to look at a colossal match up of the two biggest titans of the online dating industry—eHarmony vs. Match. On one side of the aisle, eHarmony boasts helping over 2 million people find love through their patented matching technology. On the other side of the aisle, Match claims to be #1 in relationships and marriages. So, who is telling the truth, and which of these dating apps is right for you?</p>
+
+
+
+<p>Today, we’re going to get to the bottom of the Match vs. eHarmony debate once and for all. We’ll take a look at five major categories of comparison and give you our thoughts and analysis. By the end of this article, you should have a pretty good idea which of these two online dating sites is right for you.</p>
+
+
+
+<h2>eHarmony vs. Match &#8211; The Winner Upfront</h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img width="1024" height="122" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20122'%3E%3C/svg%3E" alt="eHarmony vs Match" class="wp-image-26775" data-lazy-srcset="https://healthyframework.com/wp-content/uploads/2022/01/MatchvsEharmony.jpg 1024w, https://healthyframework.com/wp-content/uploads/2022/01/MatchvsEharmony-300x36.jpg 300w, https://healthyframework.com/wp-content/uploads/2022/01/MatchvsEharmony-768x92.jpg 768w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://healthyframework.com/wp-content/uploads/2022/01/MatchvsEharmony.jpg" /><noscript><img width="1024" height="122" src="https://healthyframework.com/wp-content/uploads/2022/01/MatchvsEharmony.jpg" alt="eHarmony vs Match" class="wp-image-26775" srcset="https://healthyframework.com/wp-content/uploads/2022/01/MatchvsEharmony.jpg 1024w, https://healthyframework.com/wp-content/uploads/2022/01/MatchvsEharmony-300x36.jpg 300w, https://healthyframework.com/wp-content/uploads/2022/01/MatchvsEharmony-768x92.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure></div>
+
+
+<p>On the surface, the battle between eHarmony and Match.com may seem pretty close. However, when you start to dig under the hood, there looks to be a clear winner—depending on what you&#8217;re looking for. </p>
+
+
+
+<p>If you&#8217;re looking for a serious relationship with someone who is committed to the process (and not looking to play games), eHarmony is going to be the best there is. If you&#8217;re looking for more casual dating and are okay with some singles not totally serious about the process, Match would be a better fit. </p>
+
+
+
+<p>But at Healthy Framework, we&#8217;re big fans of people taking the dating process seriously and looking for that special someone. </p>
+
+
+
+<blockquote>So for us, the winner of the eHarmony vs. Match battle—is hands-down, eHarmony.</blockquote>
+
+
+
+<div class="wp-container-1 wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link" href="https://healthyframework.com/recommends/eharmony/" rel="sponsored">&gt; <strong>Try eHarmony Free Now</strong></a></div>
+</div>
+
+
+
+<hr class="wp-block-separator has-css-opacity"/>
+
+
+
+<div class="wp-container-4 wp-block-columns">
+<div class="wp-container-2 wp-block-column" style="flex-basis:66.66%">
+<h3 id="h-4-reasons-eharmony-wins-this-battle">4 Reasons eHarmony Wins This Battle</h3>
+
+
+
+<ol><li>eHarmony attracts more serious singles and less flaky, casual daters.</li><li>The profiles on eHarmony are more robust, offering more opportunities to showcase yourself and to get to know other single people.</li><li>eHarmony has a slightly slicker and easier to use interface.</li><li>The team at eHarmony added video dating features as an adaptive response to the world climate (big win).</li></ol>
+</div>
+
+
+
+<div class="wp-container-3 wp-block-column" style="flex-basis:33.33%"><div class="wp-block-image">
+<figure class="aligncenter size-large"><img width="1024" height="652" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20652'%3E%3C/svg%3E" alt="Homepage - eHarmony" class="wp-image-8554" data-lazy-srcset="https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-1024x652.jpg 1024w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-610x388.jpg 610w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-1080x688.jpg 1080w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-300x191.jpg 300w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-768x489.jpg 768w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131.jpg 1294w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-1024x652.jpg" /><noscript><img width="1024" height="652" src="https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-1024x652.jpg" alt="Homepage - eHarmony" class="wp-image-8554" srcset="https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-1024x652.jpg 1024w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-610x388.jpg 610w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-1080x688.jpg 1080w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-300x191.jpg 300w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131-768x489.jpg 768w, https://healthyframework.com/wp-content/uploads/2017/12/Homepage-eHarmony-e1579227857131.jpg 1294w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure></div></div>
+</div>
+
+
+<div id="tablepress-210-scroll-wrapper" class="tablepress-scroll-wrapper">
+
+<table id="tablepress-210" class="tablepress tablepress-id-210 tablepress-responsive">
+<thead>
+<tr class="row-1">
+	<th class="column-1">&nbsp;</th><th class="column-2">eHarmony</th><th class="column-3">Match.com</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-2">
+	<td class="column-1"></td><td class="column-2"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2060%2040'%3E%3C/svg%3E" alt="" width="60" height="40" class="aligncenter size-full wp-image-15515" data-lazy-src="https://healthyframework.com/wp-content/uploads/2020/08/eHarmony-logo.jpg" /><noscript><img src="https://healthyframework.com/wp-content/uploads/2020/08/eHarmony-logo.jpg" alt="" width="60" height="40" class="aligncenter size-full wp-image-15515" /></noscript></td><td class="column-3"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2060%2040'%3E%3C/svg%3E" alt="" width="60" height="40" class="aligncenter size-full wp-image-15515" data-lazy-src="https://healthyframework.com/wp-content/uploads/2020/12/Match-logo.jpg" /><noscript><img src="https://healthyframework.com/wp-content/uploads/2020/12/Match-logo.jpg" alt="" width="60" height="40" class="aligncenter size-full wp-image-15515" /></noscript></td>
+</tr>
+<tr class="row-3">
+	<td class="column-1">Full Review</td><td class="column-2"><a href="https://healthyframework.com/dating/review/eharmony/">Review</a></td><td class="column-3"><a href="https://healthyframework.com/dating/review/match/">Review</a></td>
+</tr>
+<tr class="row-4">
+	<td class="column-1">Best For</td><td class="column-2">Serious Relationships</td><td class="column-3">Mostly Serious Relationships</td>
+</tr>
+<tr class="row-5">
+	<td class="column-1">Overall Rating</td><td class="column-2">9.8/10.0</td><td class="column-3">8.9/10.0</td>
+</tr>
+<tr class="row-6">
+	<td class="column-1">Quality of Matches</td><td class="column-2">9.8/10.0</td><td class="column-3">9.2.10.0</td>
+</tr>
+<tr class="row-7">
+	<td class="column-1">Features</td><td class="column-2">9.9/10.0</td><td class="column-3">9.0/10.0</td>
+</tr>
+<tr class="row-8">
+	<td class="column-1">Ease of Use</td><td class="column-2">9.7/10.0</td><td class="column-3">9.5/10.0</td>
+</tr>
+<tr class="row-9">
+	<td class="column-1">Support</td><td class="column-2">9.7/10.0</td><td class="column-3">9.4/10.0</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="row-10">
+	<th class="column-1">Try Now</th><th class="column-2"><a  rel="sponsored noopener" href="https://healthyframework.com/recommends/eharmony/"> >Try Now</a></th><th class="column-3"><a rel="sponsored noopener" href="https://healthyframework.com/recommends/match/" a target="”_blank”"> >Try Now</a></th>
+</tr>
+</tfoot>
+</table>
+
+</div><!-- #tablepress-210 from cache -->
+
+
+
+<p>Want more detail on how we came to this conclusion? Here&#8217;s a complete breakdown of all categories we compared and the data behind our decisions. Click any of these jump links to explore our findings:</p>
+
+
+
+<ul><li><a href="#pros-cons">Weighing the Pros and Cons</a></li><li><a href="#pricing">Is eHarmony or Match More Expensive?</a></li><li><a href="#quality">Comparing Userbase and Quality of Singles</a></li><li><a href="#profile">Match and eHarmony Profile Comparison</a></li><li><a href="#matchmaking">Matchmaking and Features Comparison</a></li><li><a href="#messaging">Does Match or eHarmony Offer Better Messaging?</a></li><li><a href="#ease-of-use">Is Match or eHarmony Easier to Use?</a></li><li><a href="#compatibility">Device Compatibility Comparison</a></li><li><a href="#support">Which Dating Site Has Better Support?</a></li><li><a href="#faq">Match vs eHarmony FAQ</a></li><li><a href="#more">More Match and eHarmony Comparisons</a></li></ul>
+
+
+
+<a id="pros-cons"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="h-weighing-the-pros-and-cons-match-com-vs-eharmony">Weighing the Pros and Cons &#8211; Match.com vs eHarmony</h2>
+
+
+
+<div class="wp-container-7 wp-block-columns">
+<div class="wp-container-5 wp-block-column">
+<h3 id="h-what-makes-eharmony-good">What Makes eHarmony Good?</h3>
+
+
+
+<ul><li>Detailed signup leads to better matchmaking.</li><li>Focus on long lasting relationships.</li><li>Free communication weekends</li></ul>
+
+
+
+<h3 id="h-what-don-t-you-like-about-eharmony">What Don&#8217;t You Like about eHarmony?</h3>
+
+
+
+<ul><li>Premium pricing is slightly above average.</li><li>Not a good option for casual daters.</li><li>Limited free trial</li></ul>
+</div>
+
+
+
+<div class="wp-container-6 wp-block-column">
+<h3 id="h-what-makes-match-com-good">What Makes Match.com Good?</h3>
+
+
+
+<ul><li>Premium pricing is average for the industry.</li><li>Good for serious or casual daters.</li><li>More international users than eHarmony</li></ul>
+
+
+
+<h3 id="h-what-don-t-you-like-about-match-com">What Don&#8217;t You Like about Match.com?</h3>
+
+
+
+<ul><li>Multiple complaints of poor customer support.</li><li>Large number of inactive users.</li><li>Signup is less comprehensive.</li></ul>
+</div>
+</div>
+
+
+
+<a id="pricing"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="h-is-eharmony-or-match-more-expensive-cost-comparison">Is eHarmony or Match More Expensive? &#8211; Cost Comparison</h2>
+
+
+
+<h3>eHarmony Membership Pricing</h3>
+
+
+<div id="tablepress-1-scroll-wrapper" class="tablepress-scroll-wrapper">
+
+<table id="tablepress-1" class="tablepress tablepress-id-1 tablepress-responsive">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">Membership Type</th><th class="column-2">Membership Length</th><th class="column-3">Membership Cost</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1">Premium Light</td><td class="column-2">6 Months</td><td class="column-3">$65.90 per month</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1">Premium Plus</td><td class="column-2">12 Months</td><td class="column-3">$45.90 per month</td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1">Premium Extra</td><td class="column-2">24 Months</td><td class="column-3">$35.90 per month</td>
+</tr>
+</tbody>
+</table>
+
+</div><!-- #tablepress-1 from cache -->
+
+
+
+<div class="wp-container-8 wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link" href="https://healthyframework.com/recommends/eharmony/" rel="sponsored">&gt; <strong>Try eHarmony Free Now</strong></a></div>
+</div>
+
+
+
+<h3>Match Membership Pricing</h3>
+
+
+<div id="tablepress-26-scroll-wrapper" class="tablepress-scroll-wrapper">
+
+<table id="tablepress-26" class="tablepress tablepress-id-26 tablepress-responsive">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">Membership Type</th><th class="column-2">Membership Length</th><th class="column-3">Membership Cost</th><th class="column-4">Total Price</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1">Standard Plan</td><td class="column-2">3 Months</td><td class="column-3">$31.99 per month</td><td class="column-4">$95.97</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1">Standard Plan</td><td class="column-2">6 Months</td><td class="column-3">$22.99 per month</td><td class="column-4">$137.94</td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1">Standard Plan</td><td class="column-2">12 Months</td><td class="column-3">$18.99 per month</td><td class="column-4">$227.88</td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1">Premium Plan</td><td class="column-2">3 Months</td><td class="column-3">$34.99 per month</td><td class="column-4">$104.97</td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1">Premium Plan</td><td class="column-2">6 Months</td><td class="column-3">$24.99 per month</td><td class="column-4">$149.94</td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1">Premium Plan</td><td class="column-2">12 Months</td><td class="column-3">$19.99 per month</td><td class="column-4">$239.88</td>
+</tr>
+</tbody>
+</table>
+
+</div><!-- #tablepress-26 from cache -->
+
+
+
+<h3 id="h-so-match-wins-the-cost-comparison-right">So Match Wins The Cost Comparison Right?</h3>
+
+
+
+<p>Well, yes and no. If there was a section of our eHarmony vs. Match comparison that was the toughest to decide it was this one.</p>
+
+
+
+<p>You&#8217;d imagine that it should be just as easy as looking at who has the lowest price, right? </p>
+
+
+
+<p>Nope! <strong>That’s not how we look at cost</strong> (and not how you should either). Instead, <strong>we look at value</strong>. What are you getting for the price you&#8217;re paying? If a site is a few bucks more buy you can get an incredible amount of extra value, then what&#8217;s the best option for value? </p>
+
+
+
+<p>In terms of absolute dollars, <strong>Match is cheaper</strong>. <a href="https://healthyframework.com/dating/cost/eharmony/" target="_blank" rel="noreferrer noopener">eHarmony is slightly more expensive</a>, however the product you are getting<s> is a bit better in our book</s> is WAY better in our book. The 2021 and 2022 updates to the site and the new features really moved eHarmony into a league of its own. </p>
+
+
+
+<blockquote>If you can afford to pay the few extra bucks, we think you should go with eHarmony. If you’re strapped for cash and need the most budget-friendly option here, we would say to check out Match.</blockquote>
+
+
+
+<p>Additionally, it&#8217;s important to point out the eHarmony often runs discounts and sales that aren&#8217;t publicized on TV or in commercials. Instead, they only share these deals and discounts to members who have already created a free trial account. Often, these savings can be upwards of 50% off the &#8220;sticker price&#8221; that we have listed below. We&#8217;d recommend using the link below to create a free account and see what offers they have available for you. </p>
+
+
+
+<p><strong>Not only does eHarmony offer more, but it might also actually be cheaper if they have a secret sale running.</strong></p>
+
+
+
+<a id="quality"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="quality">The Quality of Singles &#8211; Match vs eHarmony</h2>
+
+
+<div id="tablepress-339-scroll-wrapper" class="tablepress-scroll-wrapper">
+
+<table id="tablepress-339" class="tablepress tablepress-id-339 tablepress-responsive">
+<thead>
+<tr class="row-1">
+	<th class="column-1">&nbsp;</th><th class="column-2">eHarmony</th><th class="column-3">Match.com</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-2">
+	<td class="column-1">Gender Ratio</td><td class="column-2">51% Men | 49% Women</td><td class="column-3">49% Men | 51% Women</td>
+</tr>
+<tr class="row-3">
+	<td class="column-1">Intentions</td><td class="column-2">Long Term Romance</td><td class="column-3">Varied</td>
+</tr>
+<tr class="row-4">
+	<td class="column-1">Time on Site</td><td class="column-2">6 mins</td><td class="column-3">7 mins</td>
+</tr>
+<tr class="row-5">
+	<td class="column-1">Monthly Users</td><td class="column-2">Over 900,000</td><td class="column-3">Over 6 million</td>
+</tr>
+<tr class="row-6">
+	<td class="column-1">Monthly Messages</td><td class="column-2">2 Million+</td><td class="column-3">Not Public</td>
+</tr>
+<tr class="row-7">
+	<td class="column-1">Profile Views Per Visit</td><td class="column-2">8</td><td class="column-3">8</td>
+</tr>
+<tr class="row-8">
+	<td class="column-1">USA Users</td><td class="column-2">94.57%</td><td class="column-3">78.13%</td>
+</tr>
+<tr class="row-9">
+	<td class="column-1">Countries Available</td><td class="column-2">121 Countries</td><td class="column-3">61 Countries</td>
+</tr>
+<tr class="row-10">
+	<td class="column-1">Total Members</td><td class="column-2">15 Million+</td><td class="column-3">20 Million+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="row-11">
+	<th class="column-1">Try Now</th><th class="column-2"><a  rel="sponsored noopener" href="https://healthyframework.com/recommends/eharmony/"> >Try Now</a></th><th class="column-3"><a rel="sponsored noopener" href="https://healthyframework.com/recommends/match/" a target="”_blank”"> >Try Now</a></th>
+</tr>
+</tfoot>
+</table>
+
+</div><!-- #tablepress-339 from cache -->
+
+
+
+<p>As one of the most important deciding factors in our matchup of eHarmony vs. Match, we put a lot of weight on the quality of singles towards our overall rating. </p>
+
+
+
+<blockquote>This one was pretty close, but the victory goes to eHarmony and here’s why. </blockquote>
+
+
+
+<p>Match has a huge quantity of singles to choose from with singles looking for all different levels of relationships across the spectrum. You have people looking for marriage and serious relationships, but you also have people looking for casual hookups or just to poke around the dating world a bit.</p>
+
+
+
+<p>Now, there is nothing wrong with looking for something super casual and not long-term, but when we hear people asking us to compare eHarmony and Match, they typically aren’t looking for something casual or a random hookup<strong>.</strong> </p>
+
+
+
+<blockquote>If you’re looking for that casual fling, Match or some other dating site or app will probably be better suited for you. But, if you’re looking for something more serious, lasting, and long-term, then eHarmony is going to be your winner.</blockquote>
+
+
+
+<p>Here&#8217;s another interesting point. You also saw earlier that eHarmony is more expensive. While this stinks in terms of your wallet or purse, it does work as a stronger barrier to entry. We’ve found that there does seem to be a direct correlation between the price of an online dating site’s membership and the quality of the members.</p>
+
+
+
+<p>We are not saying that people with more money are higher-quality people. What we are saying is that when people put more money into an online dating membership, they tend to take things a bit more serious.</p>
+
+
+
+<p>Think about a gym membership. If you spend $5 a month on your gym membership versus spending $50 a month on a membership, how much more likely are you to take getting to the gym seriously? We would like to believe that people spending the $50 on a gym membership are going to be a lot more adamant about getting their money’s worth of it.</p>
+
+
+
+<a id="profile"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background">Profile Comparison on Match and eHarmony</h2>
+
+
+
+<p>You’ll also see in the image below that eHarmony profiles are a lot more in-depth and they also require you to fill all of this information out before you have any access to other members. While, again, this might seem like an annoyance, it makes for a much more rewarding experience for users. </p>
+
+
+
+<p>You won’t be running into incomplete profiles on eHarmony like we did a few times on Match. This was a pretty big turning point for us in the Match vs. eHarmony debate. </p>
+
+
+
+<p>Here are some examples of profiles on both of these dating sites:</p>
+
+
+
+<div class="wp-container-11 wp-block-columns">
+<div class="wp-container-9 wp-block-column">
+<p><strong>eHarmony Profile Screenshot</strong></p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img width="724" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20724%201024'%3E%3C/svg%3E" alt="eHarmony Profile 2022" class="wp-image-26671" data-lazy-srcset="https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022-724x1024.jpg 724w, https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022-212x300.jpg 212w, https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022-768x1086.jpg 768w, https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022.jpg 796w" data-lazy-sizes="(max-width: 724px) 100vw, 724px" data-lazy-src="https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022-724x1024.jpg" /><noscript><img width="724" height="1024" src="https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022-724x1024.jpg" alt="eHarmony Profile 2022" class="wp-image-26671" srcset="https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022-724x1024.jpg 724w, https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022-212x300.jpg 212w, https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022-768x1086.jpg 768w, https://healthyframework.com/wp-content/uploads/2022/01/eHarmony-Profile-2022.jpg 796w" sizes="(max-width: 724px) 100vw, 724px" /></noscript></figure></div></div>
+
+
+
+<div class="wp-container-10 wp-block-column">
+<p><strong>Match Profile Screenshot</strong></p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img width="775" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20775%201024'%3E%3C/svg%3E" alt="review of match.com profile screenshot" class="wp-image-10047" data-lazy-srcset="https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-775x1024.png 775w, https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-227x300.png 227w, https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-768x1014.png 768w, https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-610x806.png 610w, https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot.png 982w" data-lazy-sizes="(max-width: 775px) 100vw, 775px" data-lazy-src="https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-775x1024.png" /><noscript><img width="775" height="1024" src="https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-775x1024.png" alt="review of match.com profile screenshot" class="wp-image-10047" srcset="https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-775x1024.png 775w, https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-227x300.png 227w, https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-768x1014.png 768w, https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot-610x806.png 610w, https://healthyframework.com/wp-content/uploads/2018/09/match-profile-screenshot.png 982w" sizes="(max-width: 775px) 100vw, 775px" /></noscript></figure></div></div>
+</div>
+
+
+
+<p><em>Note: Yup, we are the ones who blurred out the personal information. You will be able to see this stuff when logged in to eHarmony and Match</em>.<em> We just do that because we&#8217;re actually showing you real screenshots.</em></p>
+
+
+
+<a id="matchmaking"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="feature">Matchmaking and Features Comparison &#8211; Match vs eHarmony</h2>
+
+
+
+<p>Both eHarmony and Match came pretty stacked in the features department which is why this was a relatively close win for eHarmony. While both dating sites had fantastic ways to look through singles, great profile options, messaging capabilities, and more, it really came down to the matching algorithm and the guided communication that eHarmony has.</p>
+
+
+
+<p>We just liked the fact that eHarmony was going against the grain with a different approach. While Match.com’s approach most certainly works, we like seeing innovative approaches. The matching algorithm on eHarmony seems to be tried and tested and is a different way of approaching an aging industry. </p>
+
+
+
+<p>Remember, eHarmony boasts over 2 million people finding love on the site. That&#8217;s two new people every 14 minutes.</p>
+
+
+
+<p>The guided communication is a way that eHarmony will walk you through meeting someone else utilizing pre-written questions that help you to ask the tough stuff first with the help of the professionals.</p>
+
+
+
+<h3>eHarmony&#8217;s List of Features With a Paid Plan</h3>
+
+
+
+<ul><li>Unlimited messaging</li><li>View unlimited photos from other members</li><li>Filter matches by preferences and location/distance</li><li>Unique personality profile derived from the Compatibility Quiz</li><li>Ability to see who has viewed your profile</li><li>Free profile review within 15 days of your purchase with customized suggestions</li><li>Access to <a href="https://healthyframework.com/dating/blog/announcing-a-new-eharmony-premium-feature-video-date/" target="_blank" rel="noreferrer noopener">eHarmony&#8217;s new video dating feature</a></li></ul>
+
+
+
+<p>The features on Match were similar, except there is no video dating feature and no personality profile from the Compatibility Quiz. Match does offer profile reviews (once annually) and read receipts on messages, but only if you pay for the higher level membership.</p>
+
+
+
+<p><strong>eHarmony wins this round.</strong> <strong>You certainly won’t be disappointed if you go with either site, but we had to give the win here to the innovativeness of eHarmony. Additionally, the video dating feature is a great adaptive response to the world events going on today.</strong></p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://healthyframework.com/recommends/eharmony/" rel="sponsored"><img width="161" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20161%20100'%3E%3C/svg%3E" alt="eHarmony dating app logo" class="wp-image-18367" data-lazy-src="https://healthyframework.com/wp-content/uploads/2020/10/eharmony-logo-resized.png"/><noscript><img width="161" height="100" src="https://healthyframework.com/wp-content/uploads/2020/10/eharmony-logo-resized.png" alt="eHarmony dating app logo" class="wp-image-18367"/></noscript></a></figure></div>
+
+
+<div class="wp-container-12 wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link" href="https://healthyframework.com/recommends/eharmony/" rel="sponsored"><strong>&gt; Try eHarmony Now</strong></a></div>
+</div>
+
+
+
+<a id="messaging"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="h-does-match-or-eharmony-offer-better-messaging">Does Match or eHarmony Offer Better Messaging?</h2>
+
+
+
+<p>In many ways messaging on both of these platforms is pretty similar. Both sites have secure instant messaging, but there are a few important points to consider.</p>
+
+
+
+<ul><li>Both sites offer a &#8220;wink&#8221; feature to quickly show singles that you&#8217;re interested.</li><li>Both sites show if your messages have been read.</li><li>Both sites offer video chat options so you can talk over video before meeting in person<ul><li>Video Date on eHarmony</li><li>Vibe Check on Match</li></ul></li><li>Messaging at eHarmony is not free unless it&#8217;s a <a href="https://healthyframework.com/dating/dating-site-info/eharmony-free-communication-weekend/">free communication weekend</a>.</li><li>Messaging at Match is also not free, but they take a little different approach. <ul><li>You can message your &#8220;top picks&#8221;, but you can&#8217;t see how they respond until you pay.</li></ul></li><li>Match.com gives you an email address to use. That way you never have to give out any personal contact info.</li></ul>
+
+
+
+<p>When it comes to messaging <strong>we think eHarmony has the edge</strong>. Again, both options are very similar, but for free users there&#8217;s just something about the free-ish messaging that Match offers that just bothers us. We think the email think is an interesting perk, but are more impressed with the transparency of eHarmony&#8217;s product.</p>
+
+
+
+<a id="ease-of-use"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="ease">User Experience &#8211; Is Match or eHarmony Easier to Use?</h2>
+
+
+
+<p>Another category that was close, but the edge goes to eHarmony. This is a category that can be tough to put into words, but once you get in and start using a particular dating site, you’ll start to notice how easy or difficult the entire experience is.</p>
+
+
+
+<p>At first, we actually were about to give this category over to Match. When we went to try out eHarmony’s search function, we noticed that a traditional search function didn’t exist. As we got our big red X pen out, we realized that this is all part of how their program works. </p>
+
+
+
+<blockquote>They don’t want you sifting through matches like a cheap phone book. Through the eHarmony matching algorithm, the site presents you with matches that they think are going to be a nice fit for you.</blockquote>
+
+
+
+<p>We did also find later that you are able to discover around and see a lot more matches, but it was not a traditional search function like you’ll see on Match (but that’s okay with us in regards to their success rate).</p>
+
+
+
+<p>The deciding factor for us was that the user interface and member homepage for eHarmony was a little sleeker and easy to get around. We didn’t really have any trouble finding what we needed on Match, but we just really liked the updated feel of eHarmony.</p>
+
+
+
+<p><strong>eHarmony gets the check mark on this category</strong> of our eHarmony vs. Match royal rumble.</p>
+
+
+
+<a id="compatibility"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="h-device-compatibility-eharmony-vs-match">Device Compatibility &#8211; eHarmony vs Match</h2>
+
+
+
+<p>If you&#8217;re looking to date online in 2022 there&#8217;s a pretty good chance you&#8217;re going to want that dating service to work on all your devices. Let&#8217;s see how each of these sites stand up to our compatibility test:</p>
+
+
+<div id="tablepress-340-scroll-wrapper" class="tablepress-scroll-wrapper">
+
+<table id="tablepress-340" class="tablepress tablepress-id-340 tablepress-responsive">
+<thead>
+<tr class="row-1">
+	<th class="column-1">Platform</th><th class="column-2">eHarmony</th><th class="column-3">Match.com</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-2">
+	<td class="column-1">iPhone/iPad</td><td class="column-2">Yes - Requires iOS 14.0 or later.</td><td class="column-3">Yes - Requires iOS 14.0 or later.</td>
+</tr>
+<tr class="row-3">
+	<td class="column-1">App Store Rating</td><td class="column-2">4 out of 5</td><td class="column-3">3.8 out of 5</td>
+</tr>
+<tr class="row-4">
+	<td class="column-1">Android Devices</td><td class="column-2">Yes - Requires Android 6.0 and up</td><td class="column-3">Yes - Requires Android 6.0 and up</td>
+</tr>
+<tr class="row-5">
+	<td class="column-1">Google Play Rating</td><td class="column-2">3.2 out of 5</td><td class="column-3">3.4 out of 5</td>
+</tr>
+<tr class="row-6">
+	<td class="column-1">App Cost</td><td class="column-2">Free - In App Purchases Available</td><td class="column-3">Free - In App Purchases Available</td>
+</tr>
+<tr class="row-7">
+	<td class="column-1">File Size</td><td class="column-2">iOS 88 MB | Android 129MB</td><td class="column-3">iOS 182.5 MB | Android 147MB</td>
+</tr>
+<tr class="row-8">
+	<td class="column-1">Web Friendly?</td><td class="column-2">Yes - <a  rel="sponsored noopener" href="https://healthyframework.com/recommends/eharmony/">eharmony.com</a></td><td class="column-3">Yes - <a  rel="sponsored noopener" href="https://healthyframework.com/recommends/match/">match.com</a></td>
+</tr>
+</tbody>
+</table>
+
+</div><!-- #tablepress-340 from cache -->
+
+
+
+<p>So who&#8217;s the winner here? eharmony or Match?</p>
+
+
+
+<p>In the end, <strong>device compatibility is a toss up</strong>. Both apps are rated similarly, have similar file sizes, and will work on just about any phone, tablet, or computer you have.</p>
+
+
+
+<a id="support"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="support">Customer Support &#8211; Which Dating Site Has Better Help?</h2>
+
+
+
+<div class="wp-container-15 wp-block-columns">
+<div class="wp-container-13 wp-block-column">
+<h3 id="h-eharmony-support-options">eHarmony Support Options</h3>
+
+
+
+<ul><li>Phone &#8211; (844) 527-7421</li><li>Hours: Mon-Sat 8am-5pm (PST)</li><li>Live Chat</li><li>Email Contact Form</li><li>Contact via Social Media<ul><li><a href="https://twitter.com/eHarmony" target="_blank" rel="noreferrer noopener">Twitter</a></li><li><a href="https://www.facebook.com/eharmony" target="_blank" rel="noreferrer noopener">Facebook</a></li></ul></li><li>Help Center &#8211; A detailed FAQ</li><li>Mailing Address:<ul><li>P.O. Box 241810, Los Angeles, CA 90024</li></ul></li></ul>
+</div>
+
+
+
+<div class="wp-container-14 wp-block-column">
+<h3 id="h-match-com-support-options">Match.com Support Options</h3>
+
+
+
+<ul><li>Phone &#8211; (800) 926-2824</li><li>Hours: Mon-Fri 8am to 5pm (CST)</li><li>Live Chat</li><li>Email Contact Form</li><li>Contact via Social Media<ul><li><a href="https://twitter.com/Match" target="_blank" rel="noreferrer noopener">Twitter</a></li><li><a href="https://www.facebook.com/match" target="_blank" rel="noreferrer noopener">Facebook</a></li></ul></li><li>Detailed FAQ</li><li>Mailing Address:<ul><li>P. O. Box 25458, Dallas, Texas 75225</li></ul></li></ul>
+</div>
+</div>
+
+
+
+<p>While both dating sites had extensive customer help sections, <strong>Match squeaked out a victory in this category</strong>. Why? Well, it all came down to how easy it was to find out how to communicate with a real person for help. </p>
+
+
+
+<p>With Match, it took us just a few seconds to get to the help section and over to the live chat function. We would have liked to see some form of phone support as well, but a live chat function is great (We have a tendency to be picky).</p>
+
+
+
+<p>For eHarmony, their customer support section was extensive with a great, thorough FAQ section. They also do offer phone support 6 days a week, but it did take us a little longer than we’d like to find that phone number. You basically have to click through a few of the FAQ questions until you find it. Not hard to find or hidden by any means, but just took us a little longer than it did with Match.</p>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background">Get Started Now With the Winner (eHarmony)</h2>
+
+
+
+<p class="has-medium-font-size"><strong>Bottom line—the victory goes to eHarmony. If you&#8217;re looking for something serious or that could turn into something serious, it&#8217;s the dating site with the best proven track record of success.</strong></p>
+
+
+
+<div style="height:5px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://healthyframework.com/recommends/eharmony/" rel="sponsored"><img width="161" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20161%20100'%3E%3C/svg%3E" alt="eHarmony dating app logo" class="wp-image-18367" data-lazy-src="https://healthyframework.com/wp-content/uploads/2020/10/eharmony-logo-resized.png"/><noscript><img width="161" height="100" src="https://healthyframework.com/wp-content/uploads/2020/10/eharmony-logo-resized.png" alt="eHarmony dating app logo" class="wp-image-18367"/></noscript></a></figure></div>
+
+
+<div class="wp-container-16 wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link" href="https://healthyframework.com/recommends/eharmony/" rel="sponsored">&gt; <strong>Start an eHarmony Free Trial Now!</strong></a></div>
+</div>
+
+
+
+<hr class="wp-block-separator has-css-opacity"/>
+
+
+
+<h3><em>The Editor&#8217;s Take On eHarmony vs. Match</em></h3>
+
+
+
+<p><em>At the end of the day, eHarmony was able to notch out Match in several of the more important categories, including the quality of singles, ease of use, and features.</em></p>
+
+
+
+<p><em>The best thing you can do is give the site a try for yourself. The link below will get you automatically set up with a free trial account, so you can really get to know the site and see what it has to offer with absolutely no risk!</em></p>
+
+
+
+<hr class="wp-block-separator has-css-opacity"/>
+
+
+
+<a id="faq"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background" id="h-match-vs-eharmony-faq">Match vs eHarmony FAQ</h2>
+
+
+
+<h3 id="h-has-eharmony-or-match-com-led-to-more-marriages">Has eHarmony or Match.com Led to More Marriages?</h3>
+
+
+
+<p>Based on all the data we&#8217;ve seen Match has more users, but a lower success rate. The folks at eHarmony aren&#8217;t shy about reporting that &#8220;over 2 million have found love&#8221; or that &#8220;a new match is made every 14 minutes&#8221;. Match on the other hand claims to be responsible for north of 500,000 marriages and interestingly over 1 million babies.</p>
+
+
+
+<h3 id="h-are-these-sites-worth-paying-for">Are These Sites Worth Paying For?</h3>
+
+
+
+<p>We find that most users who are asking this are really asking whether or not it&#8217;s worth paying for online dating sites in general. Our answer would be <a href="https://healthyframework.com/dating/beginners/free-versus-paid-dating-sites/">yes and here&#8217;s why</a>&#8230;</p>
+
+
+
+<p>While &#8220;free&#8221; can be alluring paying for an online dating site is truly an investment in yourself. You will waste less time and encounter more high quality singles because everyone on the platform is at least serious enough to be paying.</p>
+
+
+
+<h3 id="h-which-brand-has-been-around-longer-match-or-eharmony">Which Brand Has Been Around Longer &#8211; Match or eHarmony?</h3>
+
+
+
+<p>Both of these brands are elders in the online dating industry, but Match has been around a few years longer:</p>
+
+
+
+<ul><li>Match.com launched on April 21, 1995</li><li>eHarmony launched on August 22, 2000</li><li>Which means Match.com is exactly 5 years, 4 months, and 1 day older than eHarmony.</li></ul>
+
+
+
+<h3 id="h-are-there-better-dating-apps-than-match-and-eharmony">Are There Better Dating Apps Than Match and eHarmony?</h3>
+
+
+
+<p>A lot of the answer to this question lies in what you&#8217;re looking for. If you&#8217;re not looking for something serious or long lasting you&#8217;re probably not going to be a huge fan or eHarmony or Match. We recommend you check out our full <a href="https://healthyframework.com/dating/apps/">guide to online dating apps</a> to find the perfect one for your needs.</p>
+
+
+
+<a id="more"></a>
+
+
+
+<h2 class="has-base-3-color has-global-color-12-background-color has-text-color has-background">More Match and eHarmony Comparisons</h2>
+
+
+
+<p>Still weighing your options? Here are some other pages that should help! Our team has weighed the pros and cons of eHarmony and Match.com against a bunch of other online dating options:</p>
+
+
+
+<div class="wp-container-19 wp-block-columns">
+<div class="wp-container-17 wp-block-column">
+<h3 id="h-eharmony-vs-other-apps">eHarmony vs Other Apps</h3>
+
+
+
+<ul><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-bumble/">eHarmony vs. Bumble</a></li><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-christian-mingle/">eHarmony vs. Christian Mingle</a></li><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-elite-singles/">eHarmony vs. Elite Singles</a></li><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-hinge/">eHarmony vs. Hinge</a></li><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-jdate/">eHarmony vs. JDate</a></li><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-match-vs-okcupid/">eHarmony vs. Match vs. OKCupid</a></li><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-match-vs-zoosk/">eHarmony vs. Match vs. Zoosk</a></li><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-okcupid/">eHarmony vs. OKCupid</a></li><li><a href="https://healthyframework.com/dating/versus/eharmony-vs-tinder/">eHarmony vs. Tinder</a></li><li><a href="https://healthyframework.com/dating/versus/zoosk-vs-eharmony/">eHarmony vs. Zoosk</a></li></ul>
+</div>
+
+
+
+<div class="wp-container-18 wp-block-column">
+<h3 id="h-match-vs-other-apps">Match vs Other Apps</h3>
+
+
+
+<ul><li><a href="https://healthyframework.com/dating/versus/match-com-vs-catholic-match/">Match vs. Catholic Match</a></li><li><a href="https://healthyframework.com/dating/versus/christian-mingle-vs-match/">Match vs. Christian Mingle</a><a href="https://healthyframework.com/dating/versus/eharmony-vs-jdate/"></a></li><li><a href="https://healthyframework.com/dating/versus/match-vs-elite-singles/">Match vs. Elite Singles</a></li><li><a href="https://healthyframework.com/dating/versus/match-com-vs-hinge/">Match vs. Hinge</a></li><li><a href="https://healthyframework.com/dating/versus/jdate-vs-match/">Match vs. JDate</a></li><li><a href="https://healthyframework.com/dating/versus/match-vs-okcupid/">Match vs. OKCupid</a></li><li><a href="https://healthyframework.com/dating/versus/match-vs-plenty-of-fish/">Match vs. POF (Plenty of Fish)</a></li><li><a href="https://healthyframework.com/dating/versus/silver-singles-vs-match/">Match vs. Silver Singles</a></li><li><a href="https://healthyframework.com/dating/versus/match-vs-tinder/">Match vs. Tinder</a></li><li><a href="https://healthyframework.com/dating/versus/zoosk-vs-match/">Match vs. Zoosk</a></li></ul>
+</div>
+</div>
+
+
+
+<hr class="wp-block-separator has-css-opacity"/>
+
+
+
+<div class="wp-container-22 wp-block-columns">
+<div class="wp-container-20 wp-block-column" style="flex-basis:25%">
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-large is-resized is-style-rounded"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" class="wp-image-12085" width="150" height="150" data-lazy-srcset="https://healthyframework.com/wp-content/uploads/2020/04/Jason-L-200px.jpg 200w, https://healthyframework.com/wp-content/uploads/2020/04/Jason-L-200px-150x150.jpg 150w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://healthyframework.com/wp-content/uploads/2020/04/Jason-L-200px.jpg" /><noscript><img src="https://healthyframework.com/wp-content/uploads/2020/04/Jason-L-200px.jpg" alt="" class="wp-image-12085" width="150" height="150" srcset="https://healthyframework.com/wp-content/uploads/2020/04/Jason-L-200px.jpg 200w, https://healthyframework.com/wp-content/uploads/2020/04/Jason-L-200px-150x150.jpg 150w" sizes="(max-width: 150px) 100vw, 150px" /></noscript></figure>
+</div>
+
+
+
+<div class="wp-container-21 wp-block-column" style="flex-basis:100%">
+<p><strong>Written By:</strong> <strong><a href="https://healthyframework.com/jason-lee/" target="_blank" rel="noreferrer noopener">Jason Lee</a></strong></p>
+
+
+
+<p>Jason Lee is a data analyst with a passion for studying online dating, relationships, personal growth,&nbsp;healthcare, and finance. In 2008, Jason earned a Bachelors of Science from the University of Florida, where he studied business and finance and taught interpersonal communication. </p>
+
+
+
+<p>His work has been featured in the likes of The USA Today, MSN, NBC, FOX, The Motley Fool, Net Health, and The Simple Dollar. As a business owner, relationship strategist, dating coach, and officer in the U.S. military, Jason enjoys sharing his unique knowledge base with the rest of the world. </p>
+</div>
+</div>
+
+
+
+<div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+		</div>
+
+			</div>
+</article>
+		</main>
+	</div>
+
+	
+	</div>
+</div>
+
+
+<div class="site-footer">
+				<div id="footer-widgets" class="site footer-widgets">
+				<div class="footer-widgets-container grid-container grid-parent">
+					<div class="inside-footer-widgets">
+							<div class="footer-widget-1 grid-parent grid-25 tablet-grid-50 mobile-grid-100">
+		<aside id="text-6" class="widget inner-padding widget_text"><h2 class="widget-title">Contact</h2>			<div class="textwidget"><p>8022 S Rainbow Blvd<br />
+STE 100-162<br />
+Las Vegas, NV 89139, USA</p>
+<p><a style="color: #ffffff;" href="/cdn-cgi/l/email-protection#6615131616091412260e03070a120e1f0014070b031109140d4805090b">Email Us</a></p>
+</div>
+		</aside>	</div>
+		<div class="footer-widget-2 grid-parent grid-25 tablet-grid-50 mobile-grid-100">
+		<aside id="text-8" class="widget inner-padding widget_text"><h2 class="widget-title">Featured</h2>			<div class="textwidget"><p><a style="color: #ffffff;" href="https://healthyframework.com/dating/">Dating</a><br />
+<a style="color: #ffffff;"href="https://healthyframework.com/anniversary/">Anniversary</a></p>
+</div>
+		</aside>	</div>
+		<div class="footer-widget-3 grid-parent grid-25 tablet-grid-50 mobile-grid-100">
+		<aside id="text-7" class="widget inner-padding widget_text"><h2 class="widget-title">Helpful Links</h2>			<div class="textwidget"><p><a style="color: #ffffff;" href="https://healthyframework.com/privacy-policy/">Privacy Policy</a><br />
+<a style="color: #ffffff;" href="https://healthyframework.com/terms-of-service/">TOS and Cookies</a><br />
+<a style="color: #ffffff;" href="https://healthyframework.com/about/">Our Experts</a></p>
+</div>
+		</aside>	</div>
+		<div class="footer-widget-4 grid-parent grid-25 tablet-grid-50 mobile-grid-100">
+		<aside id="lsi_widget-2" class="widget inner-padding widget_lsi_widget"><h2 class="widget-title">Social</h2><ul class="lsi-social-icons icon-set-lsi_widget-2" style="text-align: left"><li class="lsi-social-youtube"><a class="" rel="nofollow noopener noreferrer" title="YouTube" aria-label="YouTube" href="https://www.youtube.com/channel/UCLi70V-DAZoS3C93F9_7q0w" target="_blank"><i class="lsicon lsicon-youtube"></i></a></li><li class="lsi-social-facebook"><a class="" rel="nofollow noopener noreferrer" title="Facebook" aria-label="Facebook" href="https://www.facebook.com/healthyframework" target="_blank"><i class="lsicon lsicon-facebook"></i></a></li><li class="lsi-social-pinterest"><a class="" rel="nofollow noopener noreferrer" title="Pinterest" aria-label="Pinterest" href="https://www.pinterest.com/healthyframework/" target="_blank"><i class="lsicon lsicon-pinterest"></i></a></li><li class="lsi-social-twitter"><a class="" rel="nofollow noopener noreferrer" title="Twitter" aria-label="Twitter" href="https://twitter.com/healthydates" target="_blank"><i class="lsicon lsicon-twitter"></i></a></li></ul></aside>	</div>
+						</div>
+				</div>
+			</div>
+					<footer class="site-info" aria-label="Site"  itemtype="https://schema.org/WPFooter" itemscope>
+			<div class="inside-site-info grid-container grid-parent">
+								<div class="copyright-bar">
+					Powered by - Healthy Framework &copy; 2022. All Rights Reserved.				</div>
+			</div>
+		</footer>
+		</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="rocketlazyloadscript" id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script><style>.wp-container-1 {display: flex;gap: 0.5em;flex-wrap: wrap;align-items: center;justify-content: center;}.wp-container-1 > * { margin: 0; }</style>
+<style>.wp-container-2 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-2 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-2 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-3 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-3 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-3 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-4 {display: flex;gap: 2em;flex-wrap: nowrap;align-items: center;}.wp-container-4 > * { margin: 0; }</style>
+<style>.wp-container-5 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-5 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-5 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-6 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-6 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-6 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-7 {display: flex;gap: 2em;flex-wrap: nowrap;align-items: center;}.wp-container-7 > * { margin: 0; }</style>
+<style>.wp-container-8 {display: flex;gap: 0.5em;flex-wrap: wrap;align-items: center;justify-content: center;}.wp-container-8 > * { margin: 0; }</style>
+<style>.wp-container-9 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-9 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-9 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-10 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-10 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-10 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-11 {display: flex;gap: 2em;flex-wrap: nowrap;align-items: center;}.wp-container-11 > * { margin: 0; }</style>
+<style>.wp-container-12 {display: flex;gap: 0.5em;flex-wrap: wrap;align-items: center;justify-content: center;}.wp-container-12 > * { margin: 0; }</style>
+<style>.wp-container-13 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-13 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-13 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-14 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-14 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-14 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-15 {display: flex;gap: 2em;flex-wrap: nowrap;align-items: center;}.wp-container-15 > * { margin: 0; }</style>
+<style>.wp-container-16 {display: flex;gap: 0.5em;flex-wrap: wrap;align-items: center;justify-content: center;}.wp-container-16 > * { margin: 0; }</style>
+<style>.wp-container-17 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-17 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-17 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-18 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-18 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-18 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-19 {display: flex;gap: 2em;flex-wrap: nowrap;align-items: center;}.wp-container-19 > * { margin: 0; }</style>
+<style>.wp-container-20 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-20 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-20 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-21 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-21 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-21 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-22 {display: flex;gap: 2em;flex-wrap: nowrap;align-items: center;}.wp-container-22 > * { margin: 0; }</style>
+
+<style id='lsi-style-inline-css'>
+.icon-set-lsi_widget-2 a,
+			.icon-set-lsi_widget-2 a:visited,
+			.icon-set-lsi_widget-2 a:focus {
+				border-radius: 2px;
+				background: #1E72BD !important;
+				color: #FFFFFF !important;
+				font-size: 20px !important;
+			}
+
+			.icon-set-lsi_widget-2 a:hover {
+				background: #777777 !important;
+				color: #FFFFFF !important;
+			}
+</style>
+<script type="rocketlazyloadscript" src='https://healthyframework.com/wp-content/plugins/gp-premium/menu-plus/functions/js/sticky.min.js?ver=2.1.2' id='generate-sticky-js' defer></script>
+<script id='eafl-public-js-extra' type="15ebee6124b715bb0f6758fd-text/javascript">
+var eafl_public = {"home_url":"https:\/\/healthyframework.com\/","ajax_url":"https:\/\/healthyframework.com\/wp-admin\/admin-ajax.php","nonce":"a59737ea42"};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" src='https://healthyframework.com/wp-content/cache/min/1/wp-content/plugins/easy-affiliate-links/dist/public.js?ver=1653660238' id='eafl-public-js' defer></script>
+<!--[if lte IE 11]>
+<script data-wpacu-script-handle='generate-classlist' src='https://healthyframework.com/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.1.3' id='generate-classlist-js'></script>
+<![endif]-->
+<script id='generate-menu-js-extra' type="15ebee6124b715bb0f6758fd-text/javascript">
+var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+</script>
+<script type="rocketlazyloadscript" src='https://healthyframework.com/wp-content/themes/generatepress/assets/js/menu.min.js?ver=3.1.3' id='generate-menu-js' defer></script>
+<script id='generate-navigation-search-js-extra' type="15ebee6124b715bb0f6758fd-text/javascript">
+var generatepressNavSearch = {"open":"Open Search Bar","close":"Close Search Bar"};
+</script>
+<script type="rocketlazyloadscript" src='https://healthyframework.com/wp-content/themes/generatepress/assets/js/navigation-search.min.js?ver=3.1.3' id='generate-navigation-search-js' defer></script>
+<script type="15ebee6124b715bb0f6758fd-text/javascript">window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://healthyframework.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js" type="15ebee6124b715bb0f6758fd-text/javascript"></script><script type="15ebee6124b715bb0f6758fd-text/javascript">function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="15ebee6124b715bb0f6758fd-|49" defer=""></script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1654322467 -->
